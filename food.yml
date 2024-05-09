@@ -1,14 +1,12 @@
----
-- name : Print food items
-  hosts: localhost
-  vars: 
-    Fruits:
-      Mango: yellow
-      Apple: red
-      Pineapple: yellow
-  
-  tasks: 
-  - name: Print fruit name
-    debug: 
-      msg: "{{Fruits}}"
-  
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
